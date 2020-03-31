@@ -36,7 +36,7 @@ ggplot(dt.covid.sel[id %in% ids.selected], aes(date, cases, col=id)) +
 # time series plot of rate
 ggplot(dt.covid.sel[id %in% ids.selected], aes(date, rate, col=id)) +
   geom_point() +
-  geom_smooth(se=FALSE)
+  geom_smooth(method=loess, se=FALSE)
 
 # new case ~ case with date label
 ggplot(dt.covid.sel[id %in% ids.selected & new.cases > 0], aes(cases.log10, new.cases.log10, col=id, label=date)) +

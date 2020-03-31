@@ -6,7 +6,7 @@ require(segmented)
 # US states data
 #######################
 
-dt.covid <- fread("covid-19-data/us-states.csv", header=TRUE, sep=",")
+dt.covid <- fread("../covid-19-data/us-states.csv", header=TRUE, sep=",")
 dt.covid[, date := as.Date(date,  format = "%Y-%m-%d")]
 dt.covid[, id := as.factor(state)]
 
@@ -22,7 +22,7 @@ states.selected <- c("New York", "New Jersey", "California")
 # COUNTRY data
 #######################
 
-dt.covid <- fread("worldcovid-19/data/countries-aggregated.csv", header=TRUE, sep=",")
+dt.covid <- fread("../worldcovid-19/data/countries-aggregated.csv", header=TRUE, sep=",")
 setnames(dt.covid, "Date", "date")
 setnames(dt.covid, "Confirmed", "confirmed")
 setnames(dt.covid, "Recovered", "recovered")

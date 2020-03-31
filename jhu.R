@@ -1,7 +1,7 @@
 library(reshape2)
 
 
-jhu.dir <- "jhu-data/COVID-19/csse_covid_19_data/csse_covid_19_time_series"
+jhu.dir <- "../jhu-data/COVID-19/csse_covid_19_data/csse_covid_19_time_series"
 
 
 jhu.clean <- function(jhu.dt, value.name) {

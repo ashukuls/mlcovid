@@ -6,7 +6,7 @@ require(ggplot2)
 # US states data
 #######################
 
-dt.states <- fread("covid-19-data/us-states.csv", header=TRUE, sep=",")
+dt.states <- fread("../covid-19-data/us-states.csv", header=TRUE, sep=",")
 dt.states[, date := as.Date(date,  format = "%Y-%m-%d")]
 dt.states[, id := as.factor(state)]
 
@@ -18,7 +18,7 @@ setkey(dt.covid, id, date.date)
 
 
 
-dt.states <- fread("covid-19-data/us-states.csv", header=TRUE, sep=",")
+dt.states <- fread("../covid-19-data/us-states.csv", header=TRUE, sep=",")
 dt.states[, date.date := as.Date(date,  format = "%Y-%m-%d")]
 dt.states[, id := as.factor(state)]
 setkey(dt.states, id, date.date)
